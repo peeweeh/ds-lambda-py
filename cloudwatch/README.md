@@ -19,10 +19,8 @@ This Lambda Function allows users to send Deep Security System events to AWS Clo
 * At Deep Security -> Administration -> Event forwarding enter the SNS topic, the IAM Key and Secret. Test to ensure Credentials work
 * At Cloudwatch Logs Create a Log Group and a Log Stream
 * Create a new AWS Lambda Function from Scratch
-** Under Policy, Create a custom Policy use the lambda_basic_execution Role
-** Paste the code
-** Change to Python 2.7
-** Under Environment Variables, Enter the following
-*** logGroupName - 
-*** logStreamNamePrefix -
+* Under Policy, Create a custom Policy use the lambda_basic_execution Role
+* Paste the code
+* Change to Python 2.7
+* Under Environment Variables, Enter the __logGroupName__ and __logStreamNamePrefix__ with the cloudwatch logs data you entered
 * Go back to Deep Security and Test the SNS again, you should see the Log event in Cloudwatch Logs
